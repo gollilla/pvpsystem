@@ -62,16 +62,20 @@ namespace pvpsystem;
      }
 
 
-    public function onDaeth(EntityDeathEvent $ev){ //Playerが死んだ時の処理
+    
+ 
+      public function onPlayerDeath(PlayerDeathEvent $ev){
 
-            $ev->setDeathMessage(null); //死んだときのMessageを消す
+
+
+		$ev->setDeathMessage(null); //死んだときのMessageを消す
 
             $player = $ev->getEntity();
 
             if($player instanceof Player){
 
                     $item = Item::get(266,0,1);
-                    $item2 = Item::get(332,0,0);
+                    $item2 = Item::get(332,0,1);
 
                     $items = array($item,$item2);
 
@@ -83,12 +87,8 @@ namespace pvpsystem;
 
 
             }
-  }
  
-      public function onPlayerDeath(PlayerDeathEvent $ev){
-
- 
-        $ev->setDeathMessage(null);
+        
       }
     
 
