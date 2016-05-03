@@ -1,0 +1,7 @@
+﻿name: pvpsystem
+main: pvpsystem\pvpsystem
+version: 1.0.0
+api: [1.11.0]
+load: POSTWORLD
+author: soradore
+description: death and damage worker
